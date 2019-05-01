@@ -168,10 +168,10 @@ body {
   color: #000;
 }
 .nav .list-item .nav-link:hover {
-  color: #224E6A;
+  color: #05293f;
 }
 .showcase {
-  background: #E9ECEF;
+  background: #e9ecef;
   padding: 6rem 2rem;
   border-radius: 5px;
 }
@@ -181,7 +181,7 @@ body {
 }
 .showcase p {
   font-size: 1rem;
-  color: #8C8C8C;
+  color: #8c8c8c;
   margin: 2rem 0;
 }
 .showcase a {
@@ -189,7 +189,7 @@ body {
   text-align: center;
   font-size: 1rem;
   padding: 1em 2em;
-  background: #808080;
+  background: #224e6a;
   text-decoration: none;
   text-transform: capitalize;
   border-radius: 5px;
@@ -197,7 +197,7 @@ body {
   transition: 0.2s;
 }
 .showcase a:hover {
-  background: #224E6A;
+  background: #05293f;
 }
 .skills {
   display: flex;
@@ -214,7 +214,7 @@ body {
 .skills .about-skills p {
   text-align: left;
   line-height: 1.4;
-  color: #8C8C8C;
+  color: #8c8c8c;
 }
 .skills .skills-list {
   flex-basis: 50%;
@@ -222,17 +222,59 @@ body {
 }
 .skills .skills-list ul {
   border-radius: 5px;
-  border: 1px solid #8C8C8C;
+  border: 1px solid #8c8c8c;
 }
 .skills .skills-list ul li {
   padding: 1rem;
-  border-top: 1px solid #8C8C8C;
+  border-top: 1px solid #8c8c8c;
 }
 .skills .skills-list ul li:first-child {
   border: none;
 }
+.work-history {
+  margin-bottom: 1.5rem;
+  /* 
+Generic Styling, for Desktops/Laptops 
+*/
+}
+.work-history h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.work-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.work-history tr {
+  font-weight: bold;
+  font-size: 0.9em;
+  /* Zebra striping */
+}
+.work-history tr:hover {
+  background: #f4f4f4;
+  cursor: pointer;
+}
+.work-history tr:nth-of-type(even) {
+  background: #e9ecef;
+}
+.work-history td,
+.work-history th {
+  padding: 10px;
+  border: 1px solid #224e6a;
+  text-align: left;
+  text-transform: capitalize;
+}
+.work-history th {
+  background: #224e6a;
+  color: white;
+  font-weight: bold;
+  padding: 0.8em;
+}
 .page-footer {
   text-align: center;
-  padding: 2rem;
-  background: #E9ECEF;
+  margin-top: 1rem;
+}
+.page-footer div {
+  background: #e9ecef;
+  padding: 1rem 0;
 }
