@@ -38,6 +38,8 @@
 @mediumFontSize: 1rem;
 @smallFontSize: .5rem;
 
+@space-5: 1rem;
+@space-10: 1.5rem;
 @space-20: 2rem;
 @space-40: 4rem;
 
@@ -111,4 +113,48 @@
 			background: @hover-color;
 		}
 	}
+}
+
+.skills {
+	.flex-baseline-between(space-between);
+
+	h3 {
+		font-size: @largeFontSize;
+		margin: @space-5 0;
+	}
+
+	.about-skills {
+		flex-basis: 50%;
+
+		p {
+			text-align: left;
+			line-height: 1.4;
+			color: @primary-color;
+		}
+	}
+
+	.skills-list {
+		flex-basis: 50%;
+		margin-left: @space-20;
+
+		ul {
+			border-radius: @border-radius;
+			border: 1px solid @primary-color;
+
+			li {
+				padding: @space-10 - .5rem;
+				border-top: 1px solid @primary-color;
+
+				&:first-child {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+.page-footer {
+	text-align: center;
+	padding: @space-20;
+	background: @primary-bg-color;
 }

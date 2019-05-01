@@ -199,3 +199,40 @@ body {
 .showcase a:hover {
   background: #224E6A;
 }
+.skills {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.skills h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.skills .about-skills {
+  flex-basis: 50%;
+}
+.skills .about-skills p {
+  text-align: left;
+  line-height: 1.4;
+  color: #8C8C8C;
+}
+.skills .skills-list {
+  flex-basis: 50%;
+  margin-left: 2rem;
+}
+.skills .skills-list ul {
+  border-radius: 5px;
+  border: 1px solid #8C8C8C;
+}
+.skills .skills-list ul li {
+  padding: 1rem;
+  border-top: 1px solid #8C8C8C;
+}
+.skills .skills-list ul li:first-child {
+  border: none;
+}
+.page-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #E9ECEF;
+}
