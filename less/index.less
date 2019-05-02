@@ -1,59 +1,212 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+@import "reset.less";
+
+/*===============================
+ * site variables
+ *===============================/
+
+/* color variables */
+@primary-color: #8c8c8c;
+@secondary-color: #000;
+@tertiary-color: #224e6a;
+@white: #fff;
+
+@hover-color: #05293f;
+
+// max width for website
+@maxWidthWebsite: 80%;
+
+/* background variables */
+@primary-bg-color: #e9ecef;
+@secondary-bg-color: #808080;
+
+/* border radius */
+@border-radius: 5px;
+
+/* container flow variables */
+.flex-baseline-between(@justifyContent) {
+  display: flex;
+  align-items: baseline;
+  justify-content: @justifyContent;
+}
+
+// base font sizes
+@defaultFontSize: 100%;
+@mobileFontSize: 150%;
+
+/* default font-size */
+@xLargeFontSize: 2rem;
+@largeFontSize: 1.5rem;
+@mediumFontSize: 1rem;
+@smallFontSize: 0.5rem;
+
+@space-5: 1rem;
+@space-10: 1.5rem;
+@space-20: 2rem;
+@space-40: 4rem;
+
+/* breakpoints */
+@mobileBreakpoint: 500px;
+@tabletBreakpoint: 750px;
+
+// general styles
+:root {
+  font-size: @defaultFontSize;
+}
+
+.container {
+  width: @maxWidthWebsite;
+  margin: 0 auto;
+}
+
+.header {
+  padding: @space-20 0;
+}
+
+.nav {
+  .nav-list-container {
+    .flex-baseline-between(flex-end);
+    width: 100%;
+  }
+
+  .list-item {
+    margin-left: @space-20;
+
+    .nav-link {
+      text-decoration: none;
+      color: @secondary-color;
+
+      &:hover {
+        color: @hover-color;
+      }
+    }
+  }
+}
+
+.showcase {
+  background: @primary-bg-color;
+  padding: @space-40 * 1.5 @space-20;
+  border-radius: @border-radius;
+
+  h2 {
+    font-size: @xLargeFontSize * 2;
+    padding: @space-20 0;
+  }
+
+  p {
+    font-size: @mediumFontSize;
+    color: @primary-color;
+    margin: @space-20 0;
+  }
+
+  a {
+    color: @white;
+    text-align: center;
+    font-size: @mediumFontSize;
+    padding: 1em 2em;
+    background: @tertiary-color;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: @border-radius;
+    font-weight: bold;
+    transition: 0.2s;
+
+    &:hover {
+      background: @hover-color;
+    }
+  }
+}
+
+.skills {
+  .flex-baseline-between(space-between);
+
+  h3 {
+    font-size: @largeFontSize;
+    margin: @space-5 0;
+  }
+
+  .about-skills {
+    flex-basis: 50%;
+
+    p {
+      text-align: left;
+      line-height: 1.4;
+      color: @primary-color;
+    }
+  }
+
+  .skills-list {
+    flex-basis: 50%;
+    margin-left: @space-20;
+
+    ul {
+      border-radius: @border-radius;
+      border: 1px solid @primary-color;
+
+      li {
+        padding: @space-10 - 0.5rem;
+        border-top: 1px solid @primary-color;
+
+        &:first-child {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.work-history {
+  margin-bottom: @space-10;
+
+  h3 {
+    font-size: @largeFontSize;
+    margin: @space-5 0;
+  }
+
+  /* 
+Generic Styling, for Desktops/Laptops 
 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  tr {
+    font-weight: bold;
+    font-size: 0.9em;
+
+    &:hover {
+      background: #f4f4f4;
+      cursor: pointer;
+    }
+
+    /* Zebra striping */
+    &:nth-of-type(even) {
+      background: @primary-bg-color;
+    }
+  }
+
+  td,
+  th {
+    padding: 10px;
+    border: 1px solid @tertiary-color;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  th {
+    background: @tertiary-color;
+    color: white;
+    font-weight: bold;
+    padding: 0.8em;
+  }
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
+.page-footer {
+  text-align: center;
+  margin-top: @space-5;
 
-html, body {
-    height: 100%;
+  div {
+    background: @primary-bg-color;
+    padding: @space-5 0;
+  }
 }
-

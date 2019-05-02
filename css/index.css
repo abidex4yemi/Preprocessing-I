@@ -1,1 +1,280 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/*===============================
+ * site variables
+ *===============================/
+
+/* color variables */
+/* background variables */
+/* border radius */
+/* container flow variables */
+/* default font-size */
+/* breakpoints */
+:root {
+  font-size: 100%;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.header {
+  padding: 2rem 0;
+}
+.nav .nav-list-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  width: 100%;
+}
+.nav .list-item {
+  margin-left: 2rem;
+}
+.nav .list-item .nav-link {
+  text-decoration: none;
+  color: #000;
+}
+.nav .list-item .nav-link:hover {
+  color: #05293f;
+}
+.showcase {
+  background: #e9ecef;
+  padding: 6rem 2rem;
+  border-radius: 5px;
+}
+.showcase h2 {
+  font-size: 4rem;
+  padding: 2rem 0;
+}
+.showcase p {
+  font-size: 1rem;
+  color: #8c8c8c;
+  margin: 2rem 0;
+}
+.showcase a {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1em 2em;
+  background: #224e6a;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.showcase a:hover {
+  background: #05293f;
+}
+.skills {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.skills h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.skills .about-skills {
+  flex-basis: 50%;
+}
+.skills .about-skills p {
+  text-align: left;
+  line-height: 1.4;
+  color: #8c8c8c;
+}
+.skills .skills-list {
+  flex-basis: 50%;
+  margin-left: 2rem;
+}
+.skills .skills-list ul {
+  border-radius: 5px;
+  border: 1px solid #8c8c8c;
+}
+.skills .skills-list ul li {
+  padding: 1rem;
+  border-top: 1px solid #8c8c8c;
+}
+.skills .skills-list ul li:first-child {
+  border: none;
+}
+.work-history {
+  margin-bottom: 1.5rem;
+  /* 
+Generic Styling, for Desktops/Laptops 
+*/
+}
+.work-history h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.work-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.work-history tr {
+  font-weight: bold;
+  font-size: 0.9em;
+  /* Zebra striping */
+}
+.work-history tr:hover {
+  background: #f4f4f4;
+  cursor: pointer;
+}
+.work-history tr:nth-of-type(even) {
+  background: #e9ecef;
+}
+.work-history td,
+.work-history th {
+  padding: 10px;
+  border: 1px solid #224e6a;
+  text-align: left;
+  text-transform: capitalize;
+}
+.work-history th {
+  background: #224e6a;
+  color: white;
+  font-weight: bold;
+  padding: 0.8em;
+}
+.page-footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+.page-footer div {
+  background: #e9ecef;
+  padding: 1rem 0;
+}
